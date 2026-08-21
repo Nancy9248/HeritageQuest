@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { heritageSites } from './data/heritageSites';
 import { translations } from './data/translations';
+import { siteTranslations } from './data/siteTranslations';
 import { speechManager } from './utils/speech';
 import { soundEngine } from './utils/audio';
 
@@ -20,15 +21,11 @@ import GamificationModal from './components/UI/GamificationModal';
 import VRModeOverlay from './components/UI/VRModeOverlay';
 
 export default function App() {
-  // Navigation Screens: 'opening', 'language', 'gps', 'experience'
   const [screen, setScreen] = useState('opening');
-
-  // Global State
   const [selectedLang, setSelectedLang] = useState('en');
   const [userSite, setUserSite] = useState(heritageSites[0]);
   const [userCoords, setUserCoords] = useState(null);
 
-  // 3D Experience State
   const [currentChapterIdx, setCurrentChapterIdx] = useState(0);
   const [activeEra, setActiveEra] = useState('present');
   const [activeHotspot, setActiveHotspot] = useState(null);
@@ -37,7 +34,6 @@ export default function App() {
   const [currentSubtitle, setCurrentSubtitle] = useState('');
   const [isTimeWarping, setIsTimeWarping] = useState(false);
 
-  // Modals
   const [showTimeTravel, setShowTimeTravel] = useState(false);
   const [selectedArtifact, setSelectedArtifact] = useState(null);
   const [showAiGuide, setShowAiGuide] = useState(false);
@@ -45,14 +41,27 @@ export default function App() {
   const [showGamification, setShowGamification] = useState(false);
   const [showVrMode, setShowVrMode] = useState(false);
 
-  // Gamification State
   const [points, setPoints] = useState(150);
   const [unlockedBadges, setUnlockedBadges] = useState(['history_explorer']);
 
   const t = translations[selectedLang] || translations.en;
-  const currentChapter = userSite.chapters[currentChapterIdx] || userSite.chapters[0];
 
-  // Trigger Host Narration when Chapter changes
+  // Retrieve localized story data for selected site and language
+  const localizedSiteData = siteTranslations[userSite.id]?.[selectedLang] || siteTranslations[userSite.id]?.en;
+  
+  // Combine base site chapters with localized title & narration if available
+  const localizedChapters = userSite.chapters.map((ch, idx) => {
+    const locCh = localizedSiteData?.chapters?.[idx];
+    return {
+      ...ch,
+      title: locCh?.title || ch.title,
+      narration: locCh?.narration || ch.narration
+    };
+  });
+
+  const currentChapter = localizedChapters[currentChapterIdx] || localizedChapters[0];
+
+  // Trigger Host Narration when Chapter or Language changes
   useEffect(() => {
     if (screen === 'experience' && currentChapter) {
       triggerNarration(currentChapter.narration);
@@ -62,7 +71,13 @@ export default function App() {
   const triggerNarration = (text) => {
     setCurrentSubtitle(text);
     const speechLangMap = {
-      en: 'en-US', hi: 'hi-IN', mr: 'mr-IN', sa: 'hi-IN', es: 'es-ES', fr: 'fr-FR', ja: 'ja-JP'
+      en: 'en-US',
+      hi: 'hi-IN',
+      mr: 'mr-IN',
+      sa: 'hi-IN',
+      es: 'es-ES',
+      fr: 'fr-FR',
+      ja: 'ja-JP'
     };
     speechManager.speak(
       text,
@@ -79,9 +94,10 @@ export default function App() {
     setActiveEra('present');
     setScreen('experience');
 
-    // Initial Host Greeting
+    // Initial Host Greeting in native language
     setTimeout(() => {
-      triggerNarration(t.hostGreeting);
+      const locGreeting = siteTranslations[site.id]?.[selectedLang]?.greeting || t.hostGreeting;
+      triggerNarration(locGreeting);
     }, 800);
   };
 
@@ -107,7 +123,7 @@ export default function App() {
 
     const eraObj = userSite.timeEras.find((e) => e.id === eraId);
     if (eraObj) {
-      triggerNarration(`Warping time to ${eraObj.name} (${eraObj.year}). ${eraObj.description}`);
+      triggerNarration(`${eraObj.name} (${eraObj.year}): ${eraObj.description}`);
     }
 
     handleAddPoints(40);
@@ -162,7 +178,7 @@ export default function App() {
       {/* SCREEN 4: 3D Interactive Heritage Experience */}
       {screen === 'experience' && (
         <div className="relative w-full h-full">
-          {/* Header Bar with Back Button */}
+          {/* Header Bar */}
           <Header
             site={userSite}
             userCoords={userCoords}
@@ -204,11 +220,11 @@ export default function App() {
 
           {/* Story Controls Bar */}
           <StoryControls
-            chapters={userSite.chapters}
+            chapters={localizedChapters}
             currentChapterIdx={currentChapterIdx}
             onSelectChapter={setCurrentChapterIdx}
             onPrevChapter={() => setCurrentChapterIdx((p) => Math.max(0, p - 1))}
-            onNextChapter={() => setCurrentChapterIdx((p) => Math.min(userSite.chapters.length - 1, p + 1))}
+            onNextChapter={() => setCurrentChapterIdx((p) => Math.min(localizedChapters.length - 1, p + 1))}
             onOpenTimeTravel={() => setShowTimeTravel(true)}
             onOpenMinimap={() => setShowMinimap(true)}
             activeEra={activeEra}
