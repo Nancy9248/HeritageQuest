@@ -59,7 +59,196 @@ export const siteTranslations = {
         },
         {
           title: "भीषण आग आणि आजचा वारसा",
-          narration: "फेब्रुवारी १८२८ मध्ये लागलेली महाभीषण आग सलग सात दिवस जळत होती. लाकडी मजले भस्मसात झाले, पण भक्कम दगडांचे जोत आजवर मराठ्यांच्या पराक्रमाची साक्ष देत उभे आहे."
+          narration: "फेब्रुवारी १८२८ मध्ये लागलेली महाभीषण आग सलग सात दिवस जळत होती. लाकਦੀ मजले भस्मसात झाले, पण भक्कम दगडांचे जोत आजवर मराठ्यांच्या पराक्रमाची साक्ष देत उभे आहे."
+        }
+      ]
+    },
+    pa: {
+      greeting: "ਜੀ ਆਇਆਂ ਨੂੰ! ਮੈਂ ਇਸ ਸਮੇਂ ਦੀ ਯਾਤਰਾ ਵਿੱਚ ਤੁਹਾਡਾ ਇਤਿਹਾਸਕ ਗਾਈਡ ਹਾਂ। ਅੱਜ ਅਸੀਂ ਮਰਾਠਾ ਪੇਸ਼ਵਾਵਾਂ ਦੀ ਰਾਜਧਾਨੀ ਸ਼ਨੀਵਾਰ ਵਾੜਾ ਦਾ ਦੌਰਾ ਕਰਾਂਗੇ।",
+      chapters: [
+        {
+          title: "ਬਾਜੀਰਾਓ ਪਹਿਲੇ ਦੁਆਰਾ ਨੀਂਹ",
+          narration: "ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ! 1730 ਵਿੱਚ ਕਦਮ ਰੱਖੋ। ਪੇਸ਼ਵਾ ਬਾਜੀਰਾਓ ਪਹਿਲੇ ਨੇ ਮੂਥਾ ਨਦੀ ਦੇ ਕੰਢੇ ਇਸ ਮਹਾਨ ਕਿਲੇ ਦੀ ਨੀਂਹ ਸ਼ਨੀਵਾਰ ਨੂੰ ਰੱਖੀ ਸੀ, ਇਸ ਲਈ ਇਸਨੂੰ ਸ਼ਨੀਵਾਰ ਵਾੜਾ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।"
+        },
+        {
+          title: "ਦਿੱਲੀ ਦਰਵਾਜ਼ਾ",
+          narration: "ਦਿੱਲੀ ਦਰਵਾਜ਼ੇ ਦੇ ਵਿਸ਼ਾਲ ਲੱਕੜ ਦੇ ਦਰਵਾਜ਼ਿਆਂ ਨੂੰ ਦੇਖੋ! ਹਾਥੀਆਂ ਦੇ ਹਮਲਿਆਂ ਨੂੰ ਰੋਕਣ ਲਈ ਇਸ 'ਤੇ 72 ਲੋਹੇ ਦੇ ਤਿੱਖੇ ਕਿੱਲ ਲਗਾਏ ਗਏ ਸਨ।"
+        },
+        {
+          title: "ਹਜ਼ਾਰੀ ਕਰੰਜਾ ਕਮਲ ਫੁਹਾਰਾ",
+          narration: "ਹਜ਼ਾਰੀ ਕਰੰਜਾ ਨੂੰ ਦੇਖੋ! 18ਵੀਂ ਸਦੀ ਦਾ ਇਹ 16 ਪੰਖੜੀਆਂ ਵਾਲਾ ਕਮਲ ਫੁਹਾਰਾ ਪ੍ਰਾਚੀਨ ਇੰਜੀਨੀਅਰਿੰਗ ਦਾ ਅਦਭੁਤ ਨਮੂਨਾ ਸੀ।"
+        },
+        {
+          title: "ਰਹੱਸਮਈ ਅੱਗ ਅਤੇ ਵਰਤਮਾਨ ਵਿਰਾਸਤ",
+          narration: "ਫਰਵਰੀ 1828 ਵਿੱਚ ਇੱਕ ਭਿਆਨਕ ਅੱਗ ਸੱਤ ਦਿਨਾਂ ਤੱਕ ਬਲਦੀ ਰਹੀ। ਅੱਜ ਵੀ ਇਸਦੀਆਂ ਪੱਥਰਾਂ ਦੀਆਂ ਨੀਂਹਾਂ ਮਰਾਠਾ ਸ਼ਾਨ ਦੀ ਗਵਾਹੀ ਦਿੰਦੀਆਂ ਹਨ।"
+        }
+      ]
+    },
+    ta: {
+      greeting: "வணக்கம்! இந்த காலப் பயணத்தில் நான் உங்கள் வரலாற்று வழிகாட்டி. இன்று நாம் மராட்டிய பேஷ்வாக்களின் தலைநகரான சனிவார் வாடாவை ஆராய்வோம்.",
+      chapters: [
+        {
+          title: "முதலாம் பாஜிராவ் அடித்தளம்",
+          narration: "வணக்கம்! 1730 ஆம் ஆண்டிற்குச் செல்லுங்கள். மராட்டிய சாம்ராஜ்யத்தின் மாவீரர் பேஷ்வா முதலாம் பாஜிராவ் சனிக்கிழமையன்று இந்த கோட்டைக்கு அடிக்கல் நாட்டினார்."
+        },
+        {
+          title: "தில்லி தர்வாசா நுழைவாயில்",
+          narration: "தில்லி தர்வாசாவின் பிரம்மாண்டமான தேக்குமரக் கதவுகளைப் பாருங்கள்! யானைகளின் தாக்குதலைத் தடுக்க 72 கூர்மையான இரும்பு ஈட்டிகள் பொருத்தப்பட்டுள்ளன."
+        },
+        {
+          title: "ஹசாரி கரஞ்சா தாமரை நீரூற்று",
+          narration: "ஹசாரி கரஞ்சாவைப் பாருங்கள்! 18 ஆம் நூற்றாண்டின் 16 இதழ்கள் கொண்ட தாமரை நீரூற்று ஆயிரம் நீர்ச்சுழல்களை பீச்சி அடித்தது."
+        },
+        {
+          title: "மர்ம தீ மற்றும் இன்றைய பாரம்பரியம்",
+          narration: "பிப்ரவரி 1828 இல் ஏற்பட்ட கொடூரமான தீ 7 நாட்கள் எரிந்தது. இன்று இதன் கம்பீரமான கற்கள் மட்டுமே வரலாற்றின் சான்றாக நிற்கின்றன."
+        }
+      ]
+    },
+    te: {
+      greeting: "నమస్కారం! ఈ కాల ప్రయాణంలో నేను మీ చారిత్రక మార్గదర్శకుడిని. ఈ రోజు మనం మరాఠా పేష్వాల రాజధాని శనివార్ వాడాని అన్వేషిద్దాం.",
+      chapters: [
+        {
+          title: "మొదటి బాజీరావ్ పునాది",
+          narration: "నమస్కారం! 1730 కాలానికి వెళ్దాం. మరాఠా సామ్రాజ్య మహా వీరుడు పేష్వా మొదటి బాజీరావ్ శనివారం నాడు ఈ కోటకు పునాది రాయి వేశారు."
+        },
+        {
+          title: "ఢిల్లీ దర్వాజా తలుపులు",
+          narration: "ఢిల్లీ దర్వాజా భారీ టేకు తలుపులను చూడండి! ఏనుగుల దాడులను నిరోధించడానికి 72 పదునైన ఇనుప మేకులు అమర్చబడ్డాయి."
+        },
+        {
+          title: "హజారీ కరంజా కమల ఫౌంటెన్",
+          narration: "హజారీ కరంజాని చూడండి! 18వ శతాబ్దపు 16 రేకుల కమల ఫౌంటెన్ వెయ్యి నీటి ధారలను విరజిమ్మేది."
+        },
+        {
+          title: "రహస్య అగ్ని ప్రమాదం",
+          narration: "ఫిబ్రవరి 1828లో సంభవించిన ఘోర అగ్నిప్రమాదం ఏడు రోజులు రగిలింది. నేటికీ దీని రాతి పునాదులు మరాఠా వైభవానికి ప్రతీకగా నిలిచాయి."
+        }
+      ]
+    },
+    bn: {
+      greeting: "নমস্কার! এই সময়ের যাত্রায় আমি আপনার ঐতিহাসিক পথপ্রদর্শক। আজ আমরা মারাঠা পেশোয়াদের বিখ্যাত শনিওয়ার ওয়াদা অন্বেষণ করব।",
+      chapters: [
+        {
+          title: "প্রথম বাজীরাও কর্তৃক ভিত্তিপ্রস্তর",
+          narration: "নমস্কার! ১৭৩০ সালে ফিরে যান। পেশোয়া প্রথম বাজীরাও শনিবার দিনে এই দুর্গপ্রাসাদের ভিত্তিপ্রস্তর স্থাপন করেছিলেন, তাই এর নাম শনিওয়ার ওয়াদা।"
+        },
+        {
+          title: "অভেদ্য দিল্লি দরওয়াজা",
+          narration: "দিল্লি দরওয়াজার বিশালাকার সেগুন কাঠের দরজাগুলি দেখুন! হাতিদের আক্রমণ রোখার জন্য এতে ৭২টি ধারালো লোহার পেরেক লাগানো ছিল।"
+        },
+        {
+          title: "হাজারী করঞ্জা পদ্ম ফোয়ারা",
+          narration: "হাজারী করঞ্জা দেখুন! ১৮ শতকের ১৬টি পাপড়ি বিশিষ্ট এই পদ্ম ফোয়ারাটি প্রাচীন জল প্রকৌশলের এক অপূর্ব নিদর্শন ছিল।"
+        },
+        {
+          title: "রহস্যময় অগ্নিকাণ্ড ও বর্তমান ঐতিহ্য",
+          narration: "১৮২৮ সালের ফেব্রুয়ারিতে এক ভয়াবহ আগুন টানা সাত দিন ধরে জ্বলেছিল। আজও এর পাথরের ভিত্তিপ্রস্তর মারাঠা ঐতিহ্যের সাক্ষ্য দেয়।"
+        }
+      ]
+    },
+    gu: {
+      greeting: "નમસ્તે અને સ્વાગત છે! હું આ સમયની યાત્રામાં તમારો ઐતિહાસિક માર્ગદર્શક છું. આજે આપણે મરાઠા પેશ્વાઓના શનિવાર વાડાની મુલાકાત લઈશું.",
+      chapters: [
+        {
+          title: "બાજીરાવ પ્રથમ દ્વારા શિલાન્યાસ",
+          narration: "નમસ્તે! ૧૭૩૦માં પ્રવેશો. પેશ્વા બાજીરાવ પ્રથમે મુથા નદીના કિનારે શનિવારે આ કિલ્લાનો શિલાન્યાસ કર્યો હતો, તેથી તેને શનિવાર વાડા કહેવામાં આવે છે."
+        },
+        {
+          title: "અભેદ્ય દિલ્હી દરવાજો",
+          narration: "દિલ્હી દરવાજાના વિશાળ સાગના લાકડાના દરવાજા જુઓ! હાથીઓના હુમલાને રોકવા માટે તેના પર ૭૨ લોખંડના તીક્ષ્ણ ખીલા લગાવવામાં આવ્યા હતા."
+        },
+        {
+          title: "હજારી કરંજા કમળ ફુવારો",
+          narration: "હજારી કરંજા જુઓ! ૧૮મી સદીનો ૧૬ પાંખડીઓવાળો આ કમળ ફુવારો પ્રાચીન એન્જિનિયરિંગનો અદ્ભુત નમૂનો હતો."
+        },
+        {
+          title: "રહસ્યમય આગ અને વર્તમાન વારસો",
+          narration: "ફેબ્રુઆરી ૧૮૨૮માં ભીષણ આગ સાત દિવસ સુધી બળતી રહી. આજે પણ તેના પથ્થરના પાયા મરાઠા શાનની સાક્ષી પૂરે છે."
+        }
+      ]
+    },
+    kn: {
+      greeting: "ನಮಸ್ಕಾರ ಮತ್ತು ಸುಸ್ವಾಗತ! ಈ ಕಾಲಯಾನದಲ್ಲಿ ನಾನು ನಿಮ್ಮ ಐತಿಹಾಸಿಕ ಮಾರ್ಗದರ್ಶಿ. ಇಂದು ನಾವು ಮರಾಠ ಪೇಷ್ವೆಯರ ಶನಿವಾರ ವಾಡಾವನ್ನು ವೀಕ್ಷಿಸೋಣ.",
+      chapters: [
+        {
+          title: "ಮೊದಲನೆಯ ಬಾಜೀರಾವ್ ಅವರಿಂದ ತಡಿ",
+          narration: "ನಮಸ್ಕಾರ! 1730 ಕ್ಕೆ ಹೆಜ್ಜೆ ಇಡಿ. ಪೇಷ್ವೆ ಮೊದಲನೆಯ ಬಾಜೀರಾವ್ ಶನಿವಾರದಂದು ಈ ಕೋಟೆಗೆ ಅಡಿಪಾಯ ಹಾಕಿದ್ದರಿಂದ ಇದನ್ನು ಶನಿವಾರ ವಾಡಾ ಎಂದು ಕರೆಯಲಾಯಿತು."
+        },
+        {
+          title: "ದೆಹಲಿ ಬಾಗಿಲು",
+          narration: "ದೆಹಲಿ ಬಾಗಿಲ ಬೃಹತ್ ತೇಗದ တံခါးಗಳನ್ನು ನೋಡಿ! ಆನೆಗಳ ದಾಳಿಯನ್ನು ತಡೆಯಲು 72 යಕೃತ್ತಿನ ಚೂಪಾದ ಕಬ್ಬಿನ ಮುಳ್ಳುಗಳನ್ನು ಜೋಡಿಸಲಾಗಿತ್ತು."
+        },
+        {
+          title: "ಹಜಾರಿ ಕರಂಜಾ ಕಮಲ ಕಾರಂಜಿ",
+          narration: "ಹಜಾರಿ ಕರಂಜಾವನ್ನು ನೋಡಿ! 18 ನೇ ಶತಮಾನದ 16 ಎಸಳಿನ ಕಮಲ ಕಾರಂಜಿಯು ಸಾವಿರಾರು ನೀರ ಹನಿಗಳನ್ನು ಚಿಮ್ಮುತ್ತಿತ್ತು."
+        },
+        {
+          title: "ರಹಸ್ಯಮಯ ಬೆಂಕಿ ಅನಾಹುತ",
+          narration: "ಫೆಬ್ರವರಿ 1828 ರಲ್ಲಿ ಸಂಭವಿಸಿದ ಭೀಕರ ಬೆಂಕಿ ಏಳು ದಿನಗಳ ಕಾಲ ಉರಿಯಿತು. ಇಂದು ಇದರ ಕಲ್ಲಿನ ತಡಿ ಮರಾಠರ ಶೌರ್ಯವನ್ನು ಸಾರುತ್ತದೆ."
+        }
+      ]
+    },
+    ml: {
+      greeting: "നമസ്കാരം! ഈ കാലയാത്രയിൽ ഞാൻ നിങ്ങളുടെ ചരിത്ര വഴികാട്ടിയാണ്. ഇന്ന് നമ്മൾ മറാത്ത പേഷ്വമാരുടെ ശനിവാർ വാഡ സന്ദർശിക്കും.",
+      chapters: [
+        {
+          title: "ഒന്നാം ബാജിറാവു തറക്കല്ലിട്ടു",
+          narration: "നമസ്കാരം! 1730-ലേക്ക് കടക്കൂ. പേഷ്വ ഒന്നാം ബാജിറാവു ശനിയാഴ്ച ദിവസം തറക്കല്ലിട്ടതിനാലാണ് ഇതിന് ശനിവാർ വാഡ എന്ന് പേരുവന്നത്."
+        },
+        {
+          title: "ഡൽഹി ദർവാസ വാതിൽ",
+          narration: "ഡൽഹി ദർവാസയുടെ കൂറ്റൻ തേക്ക് തടികൊണ്ടുള്ള വാതിലുകൾ നോക്കൂ! ആനകളുടെ ആക്രമണം തടയാൻ 72 ഇരുമ്പ് ആണി ഉറപ്പിച്ചിരുന്നു."
+        },
+        {
+          title: "ഹസാരി കരംജ താമര നീരു ഉറവ",
+          narration: "ഹസാരി കരംജ നോക്കൂ! 18-ാം നൂറ്റാണ്ടിലെ 16 ഇതളുകളുള്ള താമര ജലധാര ആയിരം ജലധാരകൾ പ്രവഹിപ്പിച്ചിരുന്നു."
+        },
+        {
+          title: "രഹസ്യ തീപിടുത്തവും ഇന്നത്തെ പൈതൃകവും",
+          narration: "1828 ഫെബ്രുവരിയിലുണ്ടായ തീപിടുത്തം ഏഴു ദിവസം നീണ്ടുനിന്നു. ഇന്ന് ഇതിന്റെ കൽത്തറകൾ ചരിത്രത്തിന്റെ മൗനസാക്ഷിയായി നിലകൊള്ളുന്നു."
+        }
+      ]
+    },
+    ur: {
+      greeting: "خوش آمدید! میں اس سفر میں آپ کا تاریخی رہنما ہوں۔ آج ہم مرہٹہ پیشواؤں کے تاریخی قلعے شنیوار واڑا کی سیر کریں گے۔",
+      chapters: [
+        {
+          title: "باجی راؤ اول کی بنیادی سنگِ میل",
+          narration: "سلام! 1730 کی دہائی میں قدم رکھیں۔ پیشوا باجی راؤ اول نے ہفتے کے دن اس عظیم الشان قلعے کی بنیاد رکھی تھی۔"
+        },
+        {
+          title: "دہلی دروازہ",
+          narration: "دہلی دروازے کے بڑے ساگوان کے دروازوں کو دیکھیں! ہاتھیوں کے حملوں کو روکنے کے لیے اس پر 72 لوہے کے نوکدار کیلے لگائے گئے تھے۔"
+        },
+        {
+          title: "ہزاری کرنجا کنول فوارہ",
+          narration: "ہزاری کرنجا کو دیکھیں! 18ویں صدی کا یہ کنول فوارہ ہزاروں پانی کی دھارائیں چھوڑتا تھا۔"
+        },
+        {
+          title: "خوفناک آگ اور موجودہ ورثہ",
+          narration: "فروری 1828 میں لگی خوفناک آگ سات دنوں تک جلتی رہی۔ آج بھی اس کی پتھر کی بنیادیں مرہٹہ شان کی گواہی دیتی ہیں۔"
+        }
+      ]
+    },
+    ko: {
+      greeting: "나마스테! 시공간을 넘나드는 여정의 역사 가이드입니다. 오늘은 마라타 제국의 중심지인 샤니와르 와다를 탐험하겠습니다.",
+      chapters: [
+        {
+          title: "바지라오 1세의 건립",
+          narration: "나마스테! 1730년으로 이동해 봅시다. 마라타 제국의 바지라오 1세가 토요일에 이 요새의 초석을 놓았기 때문에 샤니와르(토요일) 와다라고 불립니다."
+        },
+        {
+          title: "난공불락의 델리 문",
+          narration: "델리 문의 거대한 티크 나무 문을 자세히 보세요! 전투 코끼리의 돌격을 막기 위해 72개의 날카로운 철제 ส파이크가 설치되어 있습니다."
+        },
+        {
+          title: "하자리 카란자 연꽃 분수",
+          narration: "하자리 카란자를 보세요! 18세기의 16개 꽃잎으로 이루어진 이 연꽃 분수는 천 개의 섬세한 줄기를 뿜어내던 공학적 기적이었습니다."
+        },
+        {
+          title: "의문의 화재와 현대의 유산",
+          narration: "1828년 2월 7일 동안 대화재가 타올라 화려한 목조 건물이 전소되었으나, 거대한 석조 기단은 오늘날에도 마라타의 기상을 증언하고 있습니다."
         }
       ]
     },
@@ -85,7 +274,7 @@ export const siteTranslations = {
       ]
     },
     es: {
-      greeting: "¡Namaste y bienvenido, viajero! Soy su guía para este viaje en el tiempo. Hoy exploraremos Shaniwar Wada, la sede de los Peshwas del Imperio Maratha. Cada piedra aquí tiene una historia.",
+      greeting: "¡Namaste y bienvenido, viajero! Soy su guía para este viaje en el tiempo. Hoy exploraremos Shaniwar Wada, la sede de los Peshwas del Imperio Maratha.",
       chapters: [
         {
           title: "La Fundación por Bajirao I",
@@ -131,7 +320,7 @@ export const siteTranslations = {
       chapters: [
         {
           title: "バジラーオ1世による創建",
-          narration: "ナマステ！1730年にタイムトラベルしましょう。ペーシュワー・バジラーオ1世が土曜日に基礎を築いたため、シャニワール（土曜日）ワーダーと名付けられました。"
+          narration: "ナマステ！1730年にタイムトラベルしましょう。ペーシュワー・バジラーオ1世が土曜日に基礎を築いたため、シャニワール・ワーダーと名付けられました。"
         },
         {
           title: "難攻不落のデリー門",
@@ -139,255 +328,11 @@ export const siteTranslations = {
         },
         {
           title: "ハザリ・カランジャの蓮の噴水",
-          narration: "ハザリ・カランジャをご覧ください！18世紀の技術の結晶であり、千本の繊細な水柱を吹き上げていました。"
+          narration: "ハザリ・カランジャをご覧ください！18世紀の技術の結晶であり、千本の繊细な水柱を吹き上げていました。"
         },
         {
           title: "大火災と現代の遺産",
           narration: "1828年に7日間に及ぶ大火災が発生しましたが、現在も重厚な石の基壇が栄光を伝えています。"
-        }
-      ]
-    }
-  },
-
-  kailasa_ellora: {
-    en: {
-      greeting: "Welcome to Ellora Caves Cave 16 — the Kailasa Temple! This is the largest monolithic rock excavation in human history.",
-      chapters: [
-        {
-          title: "Top-Down Carving Miracle",
-          narration: "Welcome to Cave 16! Unlike modern buildings constructed bottom-up, ancient Indian artisans carved Kailasa Temple top-down into a single giant mountain of solid basalt rock."
-        },
-        {
-          title: "The Great Elephant Courtyard",
-          narration: "Observe these majestic life-sized stone elephants sculpted directly out of the mountain base. They appear to bear the weight of the entire temple on their shoulders."
-        },
-        {
-          title: "Ravana Shaking Mount Kailash",
-          narration: "Look at this masterwork relief sculpture! It depicts the demon king Ravana attempting to lift Mount Kailash, while Goddess Parvati clings to Lord Shiva."
-        }
-      ]
-    },
-    hi: {
-      greeting: "एलोरा की गुफा संख्या 16 — कैलाश मंदिर में आपका स्वागत है! यह मानव इतिहास में एक ही चट्टान को तराशकर बनाया गया सबसे बड़ा मंदिर है।",
-      chapters: [
-        {
-          title: "ऊपर से नीचे तराशने का चमत्कार",
-          narration: "गुफा 16 में आपका स्वागत है! प्राचीन भारतीय शिल्पकारों ने एक पूरे पहाड़ को ऊपर से नीचे की ओर काटकर इस विशाल कैलाश मंदिर का निर्माण किया।"
-        },
-        {
-          title: "विशाल हाथी प्रांगन",
-          narration: "पहाड़ की चट्टान से उकेरे गए इन जीवन-आकार के हाथियों को देखें। ऐसा प्रतीत होता है मानो वे संपूर्ण मंदिर का भार अपने कंधों पर उठाए हुए हैं।"
-        },
-        {
-          title: "रावण अनुग्रह मूर्तिकला",
-          narration: "इस अद्भुत मूर्तिकला को देखें! इसमें लंकापति रावण को कैलाश पर्वत को उठाते हुए दर्शाया गया है।"
-        }
-      ]
-    },
-    mr: {
-      greeting: "वेरुळच्या लेणी क्र. १६ — कैलास मंदिरात आपले स्वागत आहे! हे अखंड खडकात कोरलेले जगातले सर्वात मोठे आश्चर्य आहे.",
-      chapters: [
-        {
-          title: "वरून खाली कोरीवकामाचा चमत्कार",
-          narration: "लेणी १६ मध्ये स्वागत! प्राचीन भारतीय कारागिरांनी एका अखंड काळ्या कातळाच्या टेकडीला वरून खाली कोरून हे भव्य कैलास मंदिर साकारले."
-        },
-        {
-          title: "भव्य हत्ती अंगण",
-          narration: "कातळातून कोरलेल्या या हुबेहूब हत्तींच्या शिल्पांना पहा. जणू काही त्यांनी संपूर्ण मंदिराचा भार आपल्या खांद्यावर पेलला आहे."
-        },
-        {
-          title: "रावण अनुग्रह शिल्पकला",
-          narration: "हे जगप्रसिद्ध शिल्प पहा! कैलास पर्वत उभारण्याचा प्रयत्न करणारा रावण आणि शांत चित्ताने अंगठ्याने पर्वत स्थिर करणारे भगवान शिव येथे कोरले आहेत."
-        }
-      ]
-    },
-    sa: {
-      greeting: "एलोरा गुहा 16 — कैलास मन्दिरे भवतः स्वागतम्! एतत् विशालपाषाणयुक्तम् अद्भुतं मन्दिरम् अस्ति।",
-      chapters: [
-        {
-          title: "शिखरात् अधः पर्यन्तं निर्माणम्",
-          narration: "एलोरा गुहायां स्वागतम्! प्राचीनशिल्पिनः पर्वतात् अधः यावत् अस्य मन्दिरस्य निर्माणम् अकुर्वन्।"
-        },
-        {
-          title: "गज प्राङ्गणम्",
-          narration: "एतान् विशालपाषाणगजान् पश्यतु। एते मन्दिरस्य भारम् वहन्ति इव दृश्यन्ते।"
-        },
-        {
-          title: "रावण कैलास उत्थानम्",
-          narration: "रावणस्य अस्य उत्कृष्टशिल्पस्य दर्शनं करोतु।"
-        }
-      ]
-    },
-    es: {
-      greeting: "¡Bienvenido a las Cuevas de Ellora — Cueva 16, el Templo Kailasa! La mayor excavación monolítica de la historia.",
-      chapters: [
-        {
-          title: "Milagro de Escultura de Arriba a Abajo",
-          narration: "¡Bienvenido a la Cueva 16! Los antiguos artesanos tallaron el Templo Kailasa de arriba a abajo directamente de una montaña de basalto."
-        },
-        {
-          title: "Patio de los Elefantes",
-          narration: "Observe estos majestuosos elefantes tallados a tamaño real. Parecen sostener todo el templo sobre sus hombros."
-        },
-        {
-          title: "Ravana Sacudiendo el Monte Kailash",
-          narration: "Contemple esta escultura que representa al rey demonio Ravana intentando levantar el monte sagrado."
-        }
-      ]
-    },
-    fr: {
-      greeting: "Bienvenue dans la Grotte 16 d'Ellora — le Temple Kailasa! La plus grande excavation monolithique au monde.",
-      chapters: [
-        {
-          title: "Chef-d'œuvre Sculpté du Haut vers le Bas",
-          narration: "Bienvenue dans la Grotte 16! Les anciens artisans ont sculpté ce temple du sommet vers la base dans un seul bloc de basalte."
-        },
-        {
-          title: "La Cour des Éléphants",
-          narration: "Admirez ces éléphants sculptés grandeur nature qui semblent porter le poids du temple sur leurs épaules."
-        },
-        {
-          title: "Ravana Soulevant le Mont Kailash",
-          narration: "Regardez ce panneau d'art remarquable représentant le roi démon Ravana."
-        }
-      ]
-    },
-    ja: {
-      greeting: "エローラ石窟第16窟 — カイラーサ寺院へようこそ！人類史上最大の単一岩盤くり抜き寺院です。",
-      chapters: [
-        {
-          title: "上から下への彫刻の奇跡",
-          narration: "第16窟へようこそ！古代インドの職人たちは、巨岩の山を上から下に向かって彫り進み、このカイラーサ寺院を完成させました。"
-        },
-        {
-          title: "巨大象の中庭",
-          narration: "岩盤から直接削り出された等身大の象の彫刻をご覧ください。寺院全体を肩で支えているかのようです。"
-        },
-        {
-          title: "カイラーサ山を揺らすラーヴァナ",
-          narration: "聖なるカイラーサ山を持ち上げようとするラーヴァナの力強いレリーフ彫刻をご覧ください。"
-        }
-      ]
-    }
-  },
-
-  taj_mahal: {
-    en: {
-      greeting: "Greetings! Welcome to the Taj Mahal in Agra, an architectural masterpiece of Mughal Emperor Shah Jahan.",
-      chapters: [
-        {
-          title: "Pinnacle of Mughal Symmetry",
-          narration: "Greetings! Stand before the Taj Mahal. Notice the absolute bilateral symmetry. Every element mirrors its counterpart with mathematical harmony."
-        },
-        {
-          title: "Pietra Dura Gemstone Artistry",
-          narration: "Examine the marble walls up close! Artisans used Parchin Kari (Pietra Dura), inlaying thousands of semi-precious lapis lazuli and jade gemstones."
-        },
-        {
-          title: "Minarets Engineered for Safety",
-          narration: "Observe the four 40-meter minarets. They were deliberately engineered with a slight outward tilt to fall away from the tomb during earthquakes."
-        }
-      ]
-    },
-    hi: {
-      greeting: "नमस्ते! आगरा के ताज महल में आपका स्वागत है, जो मुग़ल सम्राट शाहजहाँ का एक अमर स्थापत्य चमत्कार है।",
-      chapters: [
-        {
-          title: "मुगल वास्तुकला का सर्वोत्कृष्ट संतुलन",
-          narration: "ताजमहल के समक्ष खड़े हों! इसकी परिपूर्ण द्विपक्षीय समरूपता को देखें। प्रत्येक तत्व गणितीय सामंजस्य के साथ एक-दूसरे का प्रतिबिंब है।"
-        },
-        {
-          title: "पर्चिन कारी संगमरमर जड़ाऊ कला",
-          narration: "संगमरमर की दीवारों को करीब से देखें! कारीगरों ने पच्चीकारी (पिएट्रा ड्यूरा) तकनीक से लाजवर्द और नीलम जैसे हजारों कीमती पत्थरों को जड़ा है।"
-        },
-        {
-          title: "भूकंप रोधी मीनारें",
-          narration: "चारों 40-मीटर ऊंची मीनारों को देखें। इन्हें हल्का सा बाहर की ओर झुकाकर बनाया गया था ताकि भूकंप के समय ये मुख्य गुंबद पर न गिरें।"
-        }
-      ]
-    },
-    mr: {
-      greeting: "नमस्कार! आग्र्याच्या ताजमहालात आपले स्वागत आहे, जो मुघल सम्राट शहाजहानची एक अजरामर वास्तू आहे.",
-      chapters: [
-        {
-          title: "अतुलनीय वास्तुरचना आणि सममिती",
-          narration: "ताजमहालासमोर उभे राहा! याच्या परिपूर्ण सममितीचे निरीक्षण करा. प्रत्येक घटक एकमेकांचा अचूक आरसा आहे."
-        },
-        {
-          title: "पर्चिन कारी रत्नजडित कला",
-          narration: "पांढऱ्या संगमरवरी भिंतींवर बारीक नजर टाका! कारागिरांनी हजारो मौल्यवान रत्ने संगमरवरामध्ये नक्षीदारपणे बसवली आहेत."
-        },
-        {
-          title: "सुरक्षेसाठी झुकवलेले मिनार",
-          narration: "चारही ४०-मीटर उंच मिनारांचे निरीक्षण करा. भूकंपाच्या वेळी ते मुख्य घुमटावर न पडता बाहेर पडावेत म्हणून थोडे बाहेर झुकवले आहेत."
-        }
-      ]
-    },
-    sa: {
-      greeting: "नमस्ते! ताजमहलमन्दिरे भवतः स्वागतम्। एतत् शाहजहाँन-नृपस्य अनुपमं पाषाणशिल्पम् अस्ति।",
-      chapters: [
-        {
-          title: "शिल्पकलायाः संतुलनम्",
-          narration: "ताजमहलस्य सममितिम् पश्यतु। सर्वे अवयवाः सुसन्तुलिताः सन्ति।"
-        },
-        {
-          title: "रत्नजटित पाषाणकला",
-          narration: "अत्र संगमरमरपाषाणे बहुमूल्यरत्नानि स्थापितानि असन्।"
-        },
-        {
-          title: "मीनार स्तम्भाः",
-          narration: "भूकम्पात् रक्षणाय एते स्तम्भाः किञ्चित् बहिः नमिताः सन्ति।"
-        }
-      ]
-    },
-    es: {
-      greeting: "¡Saludos! Bienvenido al Taj Mahal en Agra, una obra maestra arquitectónica del emperador Shah Jahan.",
-      chapters: [
-        {
-          title: "Pináculo de la Simetría Mughal",
-          narration: "¡Contemple el Taj Mahal! Observe la simetría bilateral perfecta. Cada elemento refleja con armonía matemática a su contraparte."
-        },
-        {
-          title: "Arte de Piedras Preciosas Pietra Dura",
-          narration: "Examine las paredes de mármol de cerca. Los artesanos incrustaron miles de gemas semipreciosas como lapislázuli y jade."
-        },
-        {
-          title: "Minaretes Diseñados para la Seguridad",
-          narration: "Observe los cuatro minaretes de 40 metros. Fueron inclinados ligeramente hacia afuera como medida antisísmica."
-        }
-      ]
-    },
-    fr: {
-      greeting: "Bienvenue au Taj Mahal à Agra, chef-d'œuvre architectural de l'empereur moghol Shah Jahan.",
-      chapters: [
-        {
-          title: "Sommet de la Symétrie Moghole",
-          narration: "Tenez-vous devant le Taj Mahal! Remarquez la symétrie bilatérale parfaite et l'harmonie mathématique."
-        },
-        {
-          title: "Incrustation de Pierres Précieuses Pietra Dura",
-          narration: "Examinez les murs de marbre blanc incrustés de milliers de pierres semi-précieuses comme le lapis-lazuli."
-        },
-        {
-          title: "Minarets Inclinés de Sécurité",
-          narration: "Les quatre minarets de 40 mètres ont été conçus avec une légère inclinaison vers l'extérieur contre les séismes."
-        }
-      ]
-    },
-    ja: {
-      greeting: "ようこそ！アグラのタージ・マハルへ。ムガル帝国第5代皇帝シャー・ジャハーンによる白亜の傑作です。",
-      chapters: [
-        {
-          title: "ムガル建築の完璧な対称美",
-          narration: "タージ・マハルの前に立ち、左右対称の美しい完璧なバランスをご覧ください。"
-        },
-        {
-          title: "ピエトラ・デュラ象嵌細工の技",
-          narration: "白大理石の壁面を近くでご覧ください！ラピスラズリや翡翠などの天然石が精巧に埋め込まれています。"
-        },
-        {
-          title: "地震に耐える4本のミナレット",
-          narration: "高さ40メートルのミナレットは、地震の際に中央のドームを倒壊から守るため、わずかに外側に傾けて建設されています。"
         }
       ]
     }
