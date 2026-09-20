@@ -1,0 +1,33 @@
+{
+  "name": "HeritageQuest | Immersive Cultural Tourism",
+  "short_name": "HeritageQuest",
+  "description": "Immersive 3D/WebXR Indian Cultural Tourism, Multilingual AI Guides & Virtual Time Travel",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#060913",
+  "theme_color": "#060913",
+  "categories": ["travel", "education", "lifestyle", "culture"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23140d2b' stroke='%23d4af37' stroke-width='4'/><polygon points='50,15 62,38 85,38 67,54 73,78 50,64 27,78 33,54 15,38 38,38' fill='%23ffd700'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Explore Taj Mahal",
+      "short_name": "Taj Mahal",
+      "description": "Time travel & explore Taj Mahal",
+      "url": "/?monument=taj-mahal"
+    },
+    {
+      "name": "Ask Acharya Guide",
+      "short_name": "Acharya AI",
+      "description": "Chat with Acharya Vidyadhar",
+      "url": "/?guide=open"
+    }
+  ]
+}

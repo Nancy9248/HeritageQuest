@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180b1e" />
+      <stop offset="50%" stop-color="#2a1233" />
+      <stop offset="100%" stop-color="#08040d" />
+    </linearGradient>
+    <linearGradient id="haloGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e9d5ff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.0" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2cfad" />
+      <stop offset="100%" stop-color="#d9a67e" />
+    </linearGradient>
+    <linearGradient id="attireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="100%" stop-color="#581c87" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="300" height="380" rx="24" fill="url(#bgGrad)" stroke="#e9d5ff" stroke-opacity="0.3" stroke-width="2" />
+
+  <!-- Sacred Radiant Aura Halo -->
+  <circle cx="150" cy="150" r="110" fill="url(#haloGrad)" filter="url(#glow)" />
+  <circle cx="150" cy="150" r="95" fill="none" stroke="#e9d5ff" stroke-opacity="0.25" stroke-dasharray="4 4" />
+
+  <!-- Veil / Dupatta Backdrop -->
+  
+            <path d="M 110 120 Q 150 90 190 120 L 180 110 Q 150 80 120 110 Z" fill="#e9d5ff" stroke="#581c87" stroke-width="1.5" />
+            <circle cx="150" cy="85" r="5" fill="#ffffff" />
+            
+
+  <!-- Shoulders & Torso Attire -->
+  <path d="M 55 380 Q 65 245 150 245 Q 235 245 245 380 Z" fill="url(#attireGrad)" />
+  <!-- Pearl & Gold Necklace -->
+  <path d="M 115 250 Q 150 295 185 250" fill="none" stroke="#e9d5ff" stroke-width="4" />
+  <circle cx="150" cy="272" r="5" fill="#ffffff" />
+  <circle cx="136" cy="266" r="4" fill="#ffffff" />
+  <circle cx="164" cy="266" r="4" fill="#ffffff" />
+
+  <!-- Neck -->
+  <rect x="135" y="200" width="30" height="48" rx="6" fill="url(#skinGrad)" />
+
+  <!-- Head Base -->
+  <path d="M 110 142 Q 110 210 150 210 Q 190 210 190 142 Q 190 118 150 118 Q 110 118 110 142 Z" fill="url(#skinGrad)" />
+
+  <!-- Hair Frame -->
+  <path d="M 106 140 Q 150 108 194 140 Q 190 120 150 115 Q 110 120 106 140 Z" fill="#1a0f0a" />
+
+  <!-- Bindi / Maang Tikka -->
+  <circle cx="150" cy="128" r="3.5" fill="#e9d5ff" />
+
+  <!-- Facial Features -->
+  <!-- Eyes -->
+  <ellipse cx="132" cy="152" rx="6.5" ry="4" fill="#ffffff" />
+  <ellipse cx="168" cy="152" rx="6.5" ry="4" fill="#ffffff" />
+  <circle cx="132" cy="152" r="3" fill="#1f0a14" />
+  <circle cx="168" cy="152" r="3" fill="#1f0a14" />
+  <!-- Eyebrows -->
+  <path d="M 122 144 Q 132 138 142 144" fill="none" stroke="#170e0b" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M 158 144 Q 168 138 178 144" fill="none" stroke="#170e0b" stroke-width="2.2" stroke-linecap="round" />
+  <!-- Nose & Lips -->
+  <path d="M 150 150 L 148 163 L 152 163 Z" fill="#c48a60" />
+  <path d="M 138 176 Q 150 186 162 176 Q 150 180 138 176 Z" fill="#b9384e" />
+
+  <!-- Jhumka Earrings -->
+  <circle cx="106" cy="168" r="4" fill="#e9d5ff" />
+  <circle cx="194" cy="168" r="4" fill="#e9d5ff" />
+
+  <!-- Host Name Badge Overlay -->
+  <rect x="25" y="325" width="250" height="42" rx="12" fill="#120617" opacity="0.92" stroke="#e9d5ff" stroke-opacity="0.5" stroke-width="1.5" />
+  <text x="150" y="344" text-anchor="middle" fill="#ffffff" font-family="Cinzel, serif" font-weight="bold" font-size="13">Swarnakumari Devi</text>
+  <text x="150" y="359" text-anchor="middle" fill="#e9d5ff" font-family="sans-serif" font-size="10" font-weight="600">HISTORICAL FEMALE HOST</text>
+</svg>
