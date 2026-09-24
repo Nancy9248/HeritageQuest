@@ -60,7 +60,7 @@ export const Navbar = ({
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full bg-[#060913]/95 border-b border-[#e5b869]/25 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 w-full bg-[#0b0a08]/95 border-b border-[#c59b27]/20 backdrop-blur-xl font-serif-classic">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-1 sm:gap-2">
           {/* Brand & Motto */}
           <div className="flex items-center gap-2 flex-shrink-0">
@@ -68,21 +68,21 @@ export const Navbar = ({
               onClick={() => setActiveTab('monuments')}
               className="flex items-center gap-2 group text-left cursor-pointer"
             >
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#f3d389] via-[#e5b869] to-[#b88c3a] p-0.5 shadow-lg group-hover:shadow-[0_0_20px_rgba(229,184,105,0.6)] transition-all">
-                <div className="w-full h-full rounded-full bg-[#060913] flex items-center justify-center text-[#e5b869]">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[#ebd69a] via-[#c59b27] to-[#8c6a15] p-0.5 shadow-md">
+                <div className="w-full h-full rounded-full bg-[#0b0a08] flex items-center justify-center text-[#c59b27]">
                   <Compass className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-45 transition-transform duration-500" />
                 </div>
               </div>
               <div>
                 <div className="flex items-center gap-1">
-                  <span className="font-bold text-base sm:text-lg text-white font-['Cinzel'] tracking-wide">
-                    Heritage<span className="heritage-text-gold">Quest</span>
+                  <span className="font-semibold text-base sm:text-lg text-[#f7f4ed] font-['Cinzel'] tracking-widest uppercase">
+                    Heritage<span className="heritage-text-gold font-bold">Quest</span>
                   </span>
-                  <span className="text-[9px] px-1 py-0.2 rounded bg-[#e5b869]/15 text-[#e5b869] border border-[#e5b869]/35 font-semibold hidden lg:inline-block">
+                  <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#c59b27]/15 text-[#ebd69a] border border-[#c59b27]/30 font-semibold uppercase tracking-wider hidden lg:inline-block">
                     WebXR
                   </span>
                 </div>
-                <p className="text-[9px] text-stone-400 font-serif italic hidden xl:block">
+                <p className="text-[9px] text-[#a8a29e] font-serif italic hidden xl:block">
                   वसुधैव कुटुम्बकम् • The World Is One Family
                 </p>
               </div>
@@ -90,7 +90,7 @@ export const Navbar = ({
           </div>
 
           {/* Center Nav Tabs */}
-          <nav className="flex items-center gap-0.5 sm:gap-1 bg-[#0b1120]/90 p-1 rounded-2xl border border-[#e5b869]/20">
+          <nav className="flex items-center gap-0.5 sm:gap-1 bg-[#141210] p-1 rounded-xl border border-[#c59b27]/20">
             {navTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -101,10 +101,10 @@ export const Navbar = ({
                     setActiveTab(tab.id);
                     heritageAudio.playSitarPluck(440);
                   }}
-                  className={`px-2 sm:px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1 transition-all cursor-pointer ${
+                  className={`px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-gradient-to-r from-[#e5b869] to-[#d4af37] text-[#060913] shadow-md shadow-[#e5b869]/25 font-bold'
-                      : 'text-stone-300 hover:text-white hover:bg-[#111827]'
+                      ? 'bg-gradient-to-r from-[#c59b27] to-[#8c6a15] text-[#0b0a08] font-bold shadow-md'
+                      : 'text-[#a8a29e] hover:text-[#f7f4ed] hover:bg-[#1f1c18]'
                   }`}
                 >
                   <Icon className="w-3.5 h-3.5 shrink-0" />
@@ -122,15 +122,15 @@ export const Navbar = ({
                 setShowGpsModal(true);
                 heritageAudio.playSitarPluck(523.25);
               }}
-              className="flex items-center gap-1 px-2 py-1.5 rounded-xl bg-[#0b1120] hover:bg-[#111827] border border-[#e5b869]/30 hover:border-[#e5b869] text-stone-200 text-xs font-mono transition-all cursor-pointer shadow-sm group"
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#141210] hover:bg-[#1f1c18] border border-[#c59b27]/25 text-[#a8a29e] hover:text-[#f7f4ed] text-xs font-mono transition-all cursor-pointer shadow-sm group"
               title="Click to view Instant Live GPS Coordinates & Telemetry"
               aria-label="View live GPS coordinates and telemetry"
             >
               <div className="relative flex items-center justify-center">
-                <span className={`w-2 h-2 rounded-full ${gpsPos.isLive ? 'bg-emerald-400' : 'bg-[#e5b869]'}`} />
-                <span className={`absolute w-2 h-2 rounded-full opacity-75 animate-ping ${gpsPos.isLive ? 'bg-emerald-400' : 'bg-[#e5b869]'}`} />
+                <span className={`w-2 h-2 rounded-full ${gpsPos.isLive ? 'bg-emerald-500' : 'bg-[#c59b27]'}`} />
+                <span className={`absolute w-2 h-2 rounded-full opacity-75 animate-ping ${gpsPos.isLive ? 'bg-emerald-500' : 'bg-[#c59b27]'}`} />
               </div>
-              <span className="text-[10px] sm:text-[11px] text-white font-mono group-hover:text-[#e5b869] transition-colors hidden sm:inline">
+              <span className="text-[10px] sm:text-[11px] text-[#f7f4ed] font-mono group-hover:text-[#ebd69a] transition-colors hidden sm:inline">
                 {formatLatitude(gpsPos.lat).split(' ')[0]}°, {formatLongitude(gpsPos.lng).split(' ')[0]}°
               </span>
             </button>

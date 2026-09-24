@@ -11,12 +11,14 @@ import {
   Landmark,
   ChevronRight,
   ChevronLeft,
-  Eye
+  Eye,
+  LogIn,
+  UserCheck
 } from 'lucide-react';
 import { heritageAudio } from '../../services/audioSynthesizer';
 import { MONUMENTS } from '../../data/monumentsData';
 
-export const SplashScreen = ({ onBegin, currentLang = 'en', translations = {} }) => {
+export const SplashScreen = ({ onBegin, onOpenAuth, currentUser, currentLang = 'en', translations = {} }) => {
   const mountRef = useRef(null);
   const [hasStartedSound, setHasStartedSound] = useState(false);
   const [activeSpotlightIdx, setActiveSpotlightIdx] = useState(0);
@@ -243,46 +245,65 @@ export const SplashScreen = ({ onBegin, currentLang = 'en', translations = {} })
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-[#060913] text-white flex flex-col justify-between overflow-x-hidden selection:bg-[#e5b869] selection:text-[#060913]">
+    <div className="relative w-full min-h-screen bg-[#0b0a08] text-[#f7f4ed] flex flex-col justify-between overflow-x-hidden selection:bg-[#c59b27] selection:text-[#0b0a08] font-serif-classic">
       {/* 3D WebGL Background: Sacred Mandala & Golden Stardust Universe */}
-      <div ref={mountRef} className="absolute inset-0 z-0 pointer-events-none" />
+      <div ref={mountRef} className="absolute inset-0 z-0 pointer-events-none opacity-80" />
 
       {/* Top Header Bar */}
       <header className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-6 flex items-center justify-between hero-stagger-1">
         <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#f3d389] via-[#e5b869] to-[#b88c3a] p-0.5 shadow-[0_0_25px_rgba(229,184,105,0.45)]">
-            <div className="w-full h-full rounded-full bg-[#060913] flex items-center justify-center text-[#e5b869]">
-              <Compass className="w-5 h-5 animate-spin-slow" />
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#ebd69a] via-[#c59b27] to-[#8c6a15] p-0.5 shadow-md">
+            <div className="w-full h-full rounded-full bg-[#0b0a08] flex items-center justify-center text-[#c59b27]">
+              <Compass className="w-4 h-4 animate-spin-slow" />
             </div>
           </div>
           <div>
-            <h1 className="font-bold text-2xl font-['Cinzel'] tracking-wider text-white flex items-center gap-1.5">
-              Heritage<span className="heritage-text-gold">Quest</span>
+            <h1 className="font-semibold text-xl sm:text-2xl font-['Cinzel'] tracking-widest text-[#f7f4ed] flex items-center gap-1.5 uppercase">
+              Heritage<span className="heritage-text-gold font-bold">Quest</span>
             </h1>
-            <p className="text-[10px] text-stone-400 font-mono tracking-widest uppercase">
-              India Cultural Tourism & Stylized 3D WebXR
+            <p className="text-[9px] text-[#a8a29e] font-mono tracking-widest uppercase">
+              Indian Cultural Tourism &amp; Stylized 3D WebXR
             </p>
           </div>
         </div>
 
-        {/* Header Right: Sound Toggle */}
+        {/* Header Right: Sound Toggle & Auth Trigger */}
         <div className="flex items-center gap-3">
+          <button
+            onClick={() => {
+              if (onOpenAuth) onOpenAuth();
+            }}
+            className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1c1915] hover:bg-[#28241e] text-[#ebd69a] font-medium text-xs border border-[#c59b27]/35 transition-all cursor-pointer shadow-md"
+            title={currentUser ? "Account Profile & Audit Trail" : "Sign In or Create Account"}
+          >
+            {currentUser ? (
+              <>
+                <UserCheck className="w-3.5 h-3.5 text-[#c59b27]" />
+                <span className="truncate max-w-[100px]">{currentUser.user_metadata?.full_name || 'Account'}</span>
+              </>
+            ) : (
+              <>
+                <LogIn className="w-3.5 h-3.5 text-[#c59b27]" />
+                <span>Sign In / Register</span>
+              </>
+            )}
+          </button>
 
           <button
             onClick={toggleSound}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0f172a]/85 hover:bg-[#1e293b] border border-[#e5b869]/35 text-xs text-[#e5b869] transition-all cursor-pointer backdrop-blur-md shadow-lg"
+            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1c1915]/90 hover:bg-[#28241e] border border-[#c59b27]/25 text-xs text-[#a8a29e] hover:text-[#ebd69a] transition-all cursor-pointer backdrop-blur-md"
             title={hasStartedSound ? 'Mute Saraswati Veena' : 'Play Soft Saraswati Veena'}
             aria-label={hasStartedSound ? 'Mute ambient audio' : 'Play ambient audio'}
           >
             {hasStartedSound ? (
               <>
-                <Volume2 className="w-3.5 h-3.5 animate-pulse text-[#e5b869]" />
-                <span className="text-[11px] font-medium">Soft Veena Raga</span>
+                <Volume2 className="w-3.5 h-3.5 animate-pulse text-[#c59b27]" />
+                <span className="text-[11px] font-medium text-[#ebd69a]">Soft Veena Raga</span>
               </>
             ) : (
               <>
-                <VolumeX className="w-3.5 h-3.5 text-stone-400" />
-                <span className="text-[11px] font-medium text-stone-400">Sound Muted</span>
+                <VolumeX className="w-3.5 h-3.5 text-[#a8a29e]" />
+                <span className="text-[11px] font-medium text-[#a8a29e]">Sound Muted</span>
               </>
             )}
           </button>
@@ -291,34 +312,34 @@ export const SplashScreen = ({ onBegin, currentLang = 'en', translations = {} })
 
       {/* Main Split Hero Section (2-Column Grid) */}
       <main className="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center my-auto">
-        {/* Left Column (55%): Grand Calligraphy, Inscription & CTA */}
+        {/* Left Column (55%): Calligraphy, Inscription & CTA */}
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           {/* Sacred Maha Upanishad Inscription Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0f172a]/90 border border-[#e5b869]/40 text-xs text-[#e5b869] mb-4 shadow-[0_0_25px_rgba(229,184,105,0.25)] backdrop-blur-md hero-stagger-2">
-            <Sparkles className="w-3.5 h-3.5 text-[#e5b869]" />
-            <span className="font-serif tracking-wider font-semibold">महोपनिषद् • Maha Upanishad (VI.71-73)</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141210] border border-[#c59b27]/30 text-xs text-[#ebd69a] mb-4 backdrop-blur-md hero-stagger-2">
+            <Sparkles className="w-3.5 h-3.5 text-[#c59b27]" />
+            <span className="tracking-widest uppercase text-[10px] font-mono">महोपनिषद् • Maha Upanishad (VI.71-73)</span>
           </div>
 
           {/* Grand Sanskrit Shloka Heading */}
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-extrabold font-serif tracking-wide mb-3 bg-gradient-to-r from-[#fff7de] via-[#f3d389] to-[#e5b869] bg-clip-text text-transparent drop-shadow-2xl leading-tight hero-stagger-2 animate-shloka-aura">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold font-['Cormorant_Garamond'] tracking-wide mb-2 heritage-text-gold drop-shadow-lg leading-tight hero-stagger-2">
             वसुधैव कुटुम्बकम्
           </h2>
 
           {/* English Translation & Meaning */}
-          <div className="flex items-center gap-3 mb-4 hero-stagger-3">
-            <span className="w-8 h-[2px] bg-[#e5b869]"></span>
-            <p className="text-lg sm:text-2xl text-stone-200 font-light tracking-wide font-['Cinzel']">
+          <div className="flex items-center gap-3 mb-3 hero-stagger-3">
+            <span className="w-10 h-[1px] bg-[#c59b27]/60"></span>
+            <p className="text-lg sm:text-2xl text-[#f7f4ed] font-light tracking-wider font-['Cinzel']">
               "The World Is One Family"
             </p>
           </div>
 
           {/* Authentic Shloka Verse in Devanagari */}
-          <p className="text-xs sm:text-sm text-[#e5b869]/80 font-serif italic mb-4 leading-relaxed max-w-xl hero-stagger-3">
+          <p className="text-xs sm:text-sm text-[#ebd69a]/90 font-serif italic mb-5 leading-relaxed max-w-xl hero-stagger-3">
             अयं बन्धुरयं नेति गणना लघुचेतसाम् । उदारचरितानां तु वसुधैव कुटुम्बकम् ॥
           </p>
 
           {/* Evocative Narrative Description */}
-          <p className="text-sm sm:text-base text-stone-300 leading-relaxed mb-7 max-w-xl hero-stagger-4">
+          <p className="text-sm sm:text-base text-[#a8a29e] leading-relaxed mb-8 max-w-xl hero-stagger-4 font-sans">
             Journey across two millennia of Indian civilization. Converse with historical monarchs, explore sacred geometries, and discover 8 immortal architectural marvels in interactive stylized 3D WebXR.
           </p>
 
@@ -326,7 +347,7 @@ export const SplashScreen = ({ onBegin, currentLang = 'en', translations = {} })
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8 w-full sm:w-auto hero-stagger-5">
             <button
               onClick={handleStart}
-              className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#e5b869] via-[#f3d389] to-[#d4af37] text-[#060913] font-bold text-base sm:text-lg shadow-[0_0_35px_rgba(229,184,105,0.45)] hover:shadow-[0_0_55px_rgba(229,184,105,0.7)] transform hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer border border-[#fff5ce]"
+              className="group relative inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#c59b27] via-[#ebd69a] to-[#8c6a15] text-[#0b0a08] font-bold text-base shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-95 transition-all duration-300 cursor-pointer border border-[#fff2be]"
             >
               <span>{translations.letsBegin || "Begin Your Quest"}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />

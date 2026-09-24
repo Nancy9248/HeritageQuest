@@ -183,6 +183,8 @@ export function App() {
       {viewState === 'splash' && (
         <SplashScreen
           onBegin={handleBegin}
+          onOpenAuth={() => setIsAuthModalOpen(true)}
+          currentUser={currentUser}
           currentLang={currentLang}
           translations={translations}
         />
@@ -326,19 +328,21 @@ export function App() {
             badgesCount={unlockedBadges.length}
           />
 
-          <AuthModal
-            isOpen={isAuthModalOpen}
-            onClose={() => setIsAuthModalOpen(false)}
-            currentUser={currentUser}
-            onUserChange={(user) => {
-              setCurrentUser(user);
-              if (user?.user_metadata?.full_name) {
-                setUserContext((prev) => ({ ...prev, userName: user.user_metadata.full_name }));
-              }
-            }}
-          />
         </div>
       )}
+
+      {/* Global Authentication Modal (Accessible from Splash, Onboarding, or Main App) */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        currentUser={currentUser}
+        onUserChange={(user) => {
+          setCurrentUser(user);
+          if (user?.user_metadata?.full_name) {
+            setUserContext((prev) => ({ ...prev, userName: user.user_metadata.full_name }));
+          }
+        }}
+      />
     </div>
   );
 }
