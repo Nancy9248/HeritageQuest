@@ -16,7 +16,8 @@ import {
   Maximize2,
   Shield,
   Trophy,
-  Clock
+  Clock,
+  Box
 } from 'lucide-react';
 import { MONUMENTS } from '../../data/monumentsData';
 import { createMonument3D, createHotspotBeacon } from './Monuments3D';
@@ -62,8 +63,24 @@ export const MonumentViewer = ({
   const [selectedHotspot, setSelectedHotspot] = useState(null);
   const [vrStatus, setVrStatus] = useState(null);
   const [weatherInfo, setWeatherInfo] = useState(null);
-  const [isLoadingWeather, setIsLoadingWeather] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isWireframe, setIsWireframe] = useState(false);
+
+  // Apply wireframe mode toggle dynamically
+  useEffect(() => {
+    if (!monumentGroupRef.current) return;
+    monumentGroupRef.current.traverse((child) => {
+      if (child.isMesh && child.material) {
+        if (Array.isArray(child.material)) {
+          child.material.forEach((mat) => {
+            mat.wireframe = isWireframe;
+          });
+        } else {
+          child.material.wireframe = isWireframe;
+        }
+      }
+    });
+  }, [isWireframe, activeMonument.id]);
 
   // Three.js instances ref
   const sceneRef = useRef(null);
@@ -281,6 +298,17 @@ export const MonumentViewer = ({
 
     // Build new 3D monument
     const newMesh = createMonument3D(monument.id);
+    if (isWireframe) {
+      newMesh.traverse((child) => {
+        if (child.isMesh && child.material) {
+          if (Array.isArray(child.material)) {
+            child.material.forEach((m) => { m.wireframe = true; });
+          } else {
+            child.material.wireframe = true;
+          }
+        }
+      });
+    }
     monumentGroupRef.current.add(newMesh);
 
     // Add 3D Hotspot Beacons
@@ -689,12 +717,12 @@ export const MonumentViewer = ({
             </button>
           </div>
 
-          {/* Desktop Display Fallback Mode: Orbit vs First-Person Walk */}
-          <div className="flex flex-col gap-1 p-1 rounded-2xl bg-[#0f172a]/90 border border-[#dfba73]/30 backdrop-blur-md shadow-xl">
+          {/* Desktop Display Fallback Mode: Orbit vs First-Person Walk vs Architectural Wireframe */}
+          <div className="flex flex-col gap-1 p-1 rounded-2xl bg-[#141210]/95 border border-[#c59b27]/30 backdrop-blur-md shadow-xl">
             <button
               onClick={() => setControlMode('orbit')}
               className={`p-2 rounded-xl text-xs transition-colors cursor-pointer flex items-center justify-center ${
-                controlMode === 'orbit' ? 'bg-[#dfba73] text-[#090c15] font-bold' : 'text-stone-300 hover:text-white'
+                controlMode === 'orbit' ? 'bg-[#c59b27] text-[#0b0a08] font-bold' : 'text-stone-300 hover:text-white'
               }`}
               title={translations?.orbitMode || "Orbit Controls (Drag to rotate, scroll to zoom)"}
               aria-label={translations?.orbitMode || "Orbit Controls (Drag to rotate, scroll to zoom)"}
@@ -710,12 +738,28 @@ export const MonumentViewer = ({
                 updateCameraPosition();
               }}
               className={`p-2 rounded-xl text-xs transition-colors cursor-pointer flex items-center justify-center ${
-                controlMode === 'walk' ? 'bg-[#c25e36] text-white font-bold' : 'text-stone-300 hover:text-white'
+                controlMode === 'walk' ? 'bg-[#991b1b] text-white font-bold' : 'text-stone-300 hover:text-white'
               }`}
               title={translations?.walkMode || "First-Person Walkthrough (WASD to walk)"}
               aria-label={translations?.walkMode || "First-Person Walkthrough (WASD to walk)"}
             >
               <Move className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => {
+                const nextState = !isWireframe;
+                setIsWireframe(nextState);
+                heritageAudio.playSitarPluck(nextState ? 659.25 : 440);
+              }}
+              className={`p-2 rounded-xl text-xs transition-all cursor-pointer flex items-center justify-center ${
+                isWireframe
+                  ? 'bg-gradient-to-r from-[#c59b27] to-[#ebd69a] text-[#0b0a08] font-bold shadow-lg shadow-[#c59b27]/40 ring-2 ring-[#ebd69a]'
+                  : 'text-stone-300 hover:text-[#ebd69a] hover:bg-[#1f1c18]'
+              }`}
+              title={isWireframe ? "Disable Architectural Wireframe Blueprint" : "Enable Architectural Wireframe Blueprint Mode"}
+              aria-label="Toggle Architectural Wireframe Blueprint Mode"
+            >
+              <Box className="w-4 h-4" />
             </button>
           </div>
 
